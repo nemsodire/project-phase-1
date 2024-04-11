@@ -1,68 +1,62 @@
-*{
+* {
     border: 0;
     margin: 0;
 }
-nav{
-    
+
+nav {
     display: flex;
-    margin-bottom: 0;
-    text-align: center;
-    padding: 0 auto;
     justify-content: space-between;
-    background-color:#F1E4DC
-    
+    align-items: center;
+    background-color: #F1E4DC;
+    padding: 10px;
 }
- nav img{
-    width: 200px;
-    height: 200px;
-    margin-left: 550px;
+
+nav img {
+    max-width: 100%;
+    height: auto;
 }
- nav ul{
-    
-    list-style-type: none;
+
+.browse {
+    height: calc(50vh - 20px); /* Adjusted height to fit 4x2 grid */
+    background-color: #EBD1C1;
+}
+
+#Searchbooks {
+    background-color: #E4BFA6;
+}
+
+.browse ul {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap into multiple lines */
     justify-content: space-between;
-    padding: 30px;
+    padding: 10px;
 }
+
 ul li {
-    padding-right: 10px;
-
-}
-#Home{
-    height: 100vh;
-    background-color:#EBD1C1;
+    flex-basis: calc(25% - 20px); /* Adjusted item width for 4x2 grid with spacing */
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 10px;
 }
 
-#Searchbooks{
-    height: 100vh;
-    background-color:#E4BFA6;
-}
-#library{
-    width:250px ;
+#library {
+    width: 100%;
+    max-width: 250px;
     height: 400px;
 }
 
-ul{
-    display: flex;
-    list-style-type: none;
-    border-bottom: rgba(128, 128, 128, 0.014);
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 10px;
-}
-#search{
-    font-size: xx-large;
-}
-#search-bar{
+#search-bar {
     display: flex;
     align-self: center;
 }
-input[type="text"]{
+
+input[type="text"] {
     padding: 8px;
     border: 1px solid #333;
     border-radius: 4px;
-
 }
-button{
+
+button {
     padding: 8px;
     background-color: burlywood;
     color: white;
@@ -70,3 +64,25 @@ button{
     border-radius: 4px;
     cursor: pointer;
 }
+#books-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust as needed */
+    gap: 20px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.book img {
+    max-width: 100%;
+    height: auto;
+    max-height: 200px; /* Adjust max-height as needed */
+}
+/* 
+#search-container {
+    display: none;
+} */

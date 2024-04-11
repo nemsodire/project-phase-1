@@ -1,22 +1,23 @@
-const dataPath = './db.json'; // Assuming db.json is in the same directory
-
+const dataPath = './db.json'; 
+const submitButton = document.getElementById('submit-comment');
+const commentMessage = document.getElementById('comment-message');
 const notAvailableMsg = document.getElementById('not-available-msg');
 
-const booksContainer = document.getElementById('books-container');  // Get reference to container element
+const booksContainer = document.getElementById('books-container');  
 document.addEventListener('DOMContentLoaded', () => {
-    // Your code that fetches data and uses boo
+    
     fetch(dataPath)
-        .then(res => res.json()) // Parse the response as JSON
+        .then(res => res.json()) 
         .then(data => {
-            displayBooks(data); // Call function to display books
+            displayBooks(data); 
         })
         .catch(error => console.error(error));
-}); // Handle errors during fetching
+}); 
 
 function displayBooks(data) {
     for (const book of data.books) {
         const bookElement = document.createElement('div');
-        bookElement.classList.add('book'); // Add a class for styling
+        bookElement.classList.add('book');
 
         const titleElement = document.createElement('h2');
         titleElement.textContent = book.name;
@@ -34,7 +35,7 @@ function displayBooks(data) {
         booksContainer.appendChild(bookElement);
     }
 
-    // Add event listener for search input
+    
     const searchInput = document.getElementById('search-input');
     searchInput.addEventListener('input', filterBooks);
 }
@@ -65,3 +66,10 @@ function filterBooks() {
         notAvailableMsg.style.display = 'none'; // Hide "Not available" message if books match the search term
     }
 }
+submitButton.addEventListener('click', () => {
+    commentMessage.style.display = 'block';
+    setTimeout(() => {
+        commentMessage.style.display = 'none';
+    }, 3000); 
+     //This is to hide the message after 3 seconds
+});

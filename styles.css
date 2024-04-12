@@ -29,7 +29,7 @@ nav img {
 }
 
 #Searchbooks {
-    background-color: #cb997e;
+    background-color: #f1dac4;
 }
 
 .browse ul {
@@ -104,8 +104,9 @@ button {
 } */
 #comment-section{
     height: 50vh;
-    background-color: #fcd5ce;
+    background-color: #ece4db;
     margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 #left-section{

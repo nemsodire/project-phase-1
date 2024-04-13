@@ -20,7 +20,7 @@ nav img {
 }
 
 .browse {
-    height: calc(50vh - 20px); /* Adjusted height to fit 4x2 grid */
+    height: calc(50vh - 20px); 
     
 }
 #Home{

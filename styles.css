@@ -40,7 +40,7 @@ nav img {
 }
 
 ul li {
-    flex-basis: calc(25% - 20px); /* Adjusted item width for 4x2 grid with spacing */
+    flex-basis: calc(25% - 20px); 
     margin-bottom: 20px;
     box-sizing: border-box;
     
